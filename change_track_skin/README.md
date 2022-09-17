@@ -1,3 +1,4 @@
+# If you're getting a 'cannot access field setTrackSprite' error, make sure you are using Arcade Zero v4.0.1 or a later version
 # Included commands and usage
 # scenecontrol(timing, changetrackskin, end_timing, skin, easing)
 1. timing - when the track should start fading into the new skin
