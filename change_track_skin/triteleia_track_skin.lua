@@ -10,7 +10,7 @@ function change_track_skin(timing, end_timing, skin, easing)
 		
 		if tracks[skin] ~= nil then -- If track with desired skin already exists,
 			track_alpha_channels[skin].addKey(timing-1,track_alpha_channels[skin].valueAt(timing)) -- Ensure alpha value doesn't change until it's necessary here, probably staying at 0
-									  .addKey(timing,0)       									   -- Start track alpha at 0
+									  .addKey(timing,0,easing)       									   -- Start track alpha at 0
 									  .addKey(end_timing,255,easing) 							   -- Fade the track into existence again
 									  
 			track_layer_channels[current_skin.valueAt(timing)].addKey(end_timing,top_layer-2) -- Put last used skin track below the new track when the new track is FINISHED fading in
@@ -26,7 +26,7 @@ function change_track_skin(timing, end_timing, skin, easing)
 			
 			track_alpha_channels[skin] = Channel.named(skin).keyframe().setDefaultEasing('l')	-- Create an exclusive alpha channel for the new track
 															.addKey(0,0)						-- Make track start fully transparent
-															.addKey(timing,0)					-- Ensure track stays transparent until it's go time
+															.addKey(timing,0,easing)					-- Ensure track stays transparent until it's go time
 															.addKey(end_timing,255,easing)  	-- Fade new track into existence								
 			tracks[skin].colorA = track_alpha_channels[skin] -- Make the new track use the above channel for its alpha values
 			
@@ -52,6 +52,7 @@ addScenecontrol("changetrackskin", {"end_timing","skin","easing"}, function(cmd)
 	local timing = cmd.timing
 	local end_timing = cmd.args[1]
 	local skin = cmd.args[2] -- Case insensitive, name of the desired track skin within the Skin window
+	local easing = cmd.args[3]
 	
 	change_track_skin(timing, end_timing, skin, easing)
 end)
