@@ -5,6 +5,9 @@
 1. timing - when the anomaly difficulty should start appearing
 2. end_timing - when the anomaly difficulty should stop appearing
 3. filename - the full name of the difficulty background image (e.g. t_difficulty_cut.png)
+
+The code is made to work with the t_difficulty_cut asset (any 160 x 55px image should fit perfectly).
+
 4. difficulty_text - the text that should be displayed over the difficulty background
 5. easing (optional) - easing to use when fading in the new difficulty
 
