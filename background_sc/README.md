@@ -4,6 +4,7 @@
 2. filename - full name of the image that you want to use, including its file extension (e.g., "base_conflict.jpg")
 
 These commands use the filename used here as an identifier of which background image should be modified
+
 Works both with .jpg and .png files
 # scenecontrol(timing, bgshow, end_timing, filename, alpha, easing)
 1. timing - when the background should start easing into its new alpha value
