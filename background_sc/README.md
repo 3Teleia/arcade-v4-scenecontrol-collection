@@ -1,6 +1,6 @@
 # Included commands and usage
 # scenecontrol(timing, bgcreate, filename)
-1. timing - not used, can be left as 0
+1. timing - not used, should be left as 0
 2. filename - full name of the image that you want to use, including its file extension (e.g., "base_conflict.jpg")
 
 These commands use the filename used here as an identifier of which background image should be modified
