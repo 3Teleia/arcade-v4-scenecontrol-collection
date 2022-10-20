@@ -5,7 +5,7 @@
 
 These commands use the filename used here as an identifier of which background image should be modified
 
-Works both with .jpg and .png files
+Works both with .jpg and .png files. The files have to be within the Scenecontrol folder of the chart.
 # scenecontrol(timing, bgshow, end_timing, filename, alpha, easing)
 1. timing - when the background should start easing into its new alpha value
 2. end_timing - when the background should reach the specified alpha value
