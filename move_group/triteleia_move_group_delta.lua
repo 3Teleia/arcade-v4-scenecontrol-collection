@@ -1,6 +1,6 @@
-x_channels = {}
-y_channels = {}
-z_channels = {}
+local x_channels = {}
+local y_channels = {}
+local z_channels = {}
 
 function move_group(timing, end_timing, timing_group, x, y, z, easing)
 	if x ~= 0 then
