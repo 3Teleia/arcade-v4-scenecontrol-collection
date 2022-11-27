@@ -18,8 +18,8 @@ Use "base" as the filename to change the base background's alpha value
 1. _timing_ - when the layer of the background should be changed
 2. _filename_ - identifying filename of an already existing background
 3. _layer_ - integer that determines the layer within which the background should be placed. Higher values are visible first
-4. _layer_group_ (optional) - determines which of the two layer groups the image should be placed in
+4. _layer_group_ (optional) - determines which of the two layer groups the image should be placed in - either **foreground** or **background** (case-insensitive, any other values will make the BG stay in the same group it was in previously)
 
-In "Foreground" layers will be placed and be visible 'above' the track, I recommend only using it with .png files that don't obstruct the track.
+In "Foreground" layers will be placed and be visible 'above' the track, **.png images with transparent areas that are moved to this group should also work properly and show what is "behind" those areas**.
 
 In "Background" layers will be placed 'below' the track. Every background is in "Background" by default.
