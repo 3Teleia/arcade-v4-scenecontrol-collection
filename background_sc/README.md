@@ -5,6 +5,8 @@
 
 **To be able to use any of the other commands you have to bgcreate the image first. These commands use the filename used in the bgcreate command as an identifier of which background image should be modified.**
 
+Newly bgcreated BGs have an alpha value of 0.
+
 Works both with .jpg and .png files. **The files have to be within the Scenecontrol folder of the chart.**
 ## scenecontrol(_timing_, bgshow, _end_timing_, _filename_, _alpha_, _easing_)
 1. _timing_ - when the background should start easing into its new alpha value
@@ -13,7 +15,7 @@ Works both with .jpg and .png files. **The files have to be within the Scenecont
 4. _alpha_ - end alpha value of the background
 5. _easing (optional)_ - linear by default
 
-Use "base" as the filename to change the base background's alpha value
+Use "base" as the filename to change the base background's alpha value.
 ## scenecontrol(_timing_, bgsetlayer, _filename_, _layer_, _layer_group_)
 1. _timing_ - when the layer of the background should be changed
 2. _filename_ - identifying filename of an already existing background
