@@ -15,13 +15,13 @@ Works both with .jpg and .png files. **The files have to be within the Scenecont
 4. _alpha_ - end alpha value of the background
 5. _easing (optional)_ - linear by default
 
-Use "base" as the filename to change the base background's alpha value.
+Use "base" as the filename to change the base background's alpha value. Use "video" to change the video background's alpha value.
 ## scenecontrol(_timing_, bgsetlayer, _filename_, _layer_, _layer_group_)
 1. _timing_ - when the layer of the background should be changed
 2. _filename_ - identifying filename of an already existing background
 3. _layer_ - integer that determines the layer within which the background should be placed. Higher values are visible first
 4. _layer_group_ (optional) - determines which of the two layer groups the image should be placed in - either **foreground** or **background** (case-insensitive, any other values will make the BG stay in the same group it was in previously)
 
-In "Foreground" layers will be placed and be visible 'above' the track, **.png images with transparent areas that are moved to this group should also work properly and show what is "behind" those areas**.
+In "Foreground" layers will be placed and be visible 'above' the track, **.png images with transparent areas that are moved to this group should also work properly and show what is "behind" those areas**. In "Background" layers will be placed 'below' the track. Every background is in "Background" by default.
 
-In "Background" layers will be placed 'below' the track. Every background is in "Background" by default.
+You cannot change the base background's layering, but you can change the layering of the video background by using "video" as the filename like in bgshow
