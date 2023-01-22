@@ -7,7 +7,7 @@ function move_group(timing, end_timing, tg, x, y, z, easing)
 	
 	if x_channels[tg] == nil then
 			x_channels[tg] = Channel.keyframe().setDefaultEasing('l')
-			.addKey(0,0)
+			.addKey(0,0, easing)
 			.addKey(timing, movable_tg.translationX.valueAt(timing), easing)
 			.addKey(end_timing, x, easing)
 			
@@ -16,7 +16,7 @@ function move_group(timing, end_timing, tg, x, y, z, easing)
 	
 	if y_channels[tg] == nil then
 			y_channels[tg] = Channel.keyframe().setDefaultEasing('l')
-			.addKey(0,0)
+			.addKey(0,0, easing)
 			.addKey(timing, movable_tg.translationY.valueAt(timing), easing)
 			.addKey(end_timing, y, easing)
 			
@@ -25,7 +25,7 @@ function move_group(timing, end_timing, tg, x, y, z, easing)
 	
 	if z_channels[tg] == nil then
 			z_channels[tg] = Channel.keyframe().setDefaultEasing('l')
-			.addKey(0,0)
+			.addKey(0,0, easing)
 			.addKey(timing, movable_tg.translationZ.valueAt(timing), easing)
 			.addKey(end_timing, z, easing)
 			
@@ -34,19 +34,19 @@ function move_group(timing, end_timing, tg, x, y, z, easing)
 	
 	if x_channels[tg].valueAt(timing) ~= x then
 		x_channels[tg]
-		.addKey(timing, x_channels[tg].valueAt(timing))
+		.addKey(timing, x_channels[tg].valueAt(timing), easing)
 		.addKey(end_timing, x, easing)
 	end
 	
 	if y_channels[tg].valueAt(timing) ~= y then
 		y_channels[tg]
-		.addKey(timing, y_channels[tg].valueAt(timing))
+		.addKey(timing, y_channels[tg].valueAt(timing), easing)
 		.addKey(end_timing, y, easing)
 	end
 	
 	if z_channels[tg].valueAt(timing) ~= z then
 		z_channels[tg]
-		.addKey(timing, z_channels[tg].valueAt(timing))
+		.addKey(timing, z_channels[tg].valueAt(timing), easing)
 		.addKey(end_timing, z, easing)
 	end
 	
