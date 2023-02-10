@@ -26,7 +26,7 @@ difficulty_text.scaleY = Channel.constant(TEXT_SCALE_BASE)
 difficulty_text.translationX = Channel.constant(5.87)
 difficulty_text.translationY = Channel.constant(2.43)
 
-addScenecontrol("anomalydifficultyon", {"end_timing","filename","difficulty_text","easing"}, function(cmd)
+addScenecontrol("anomalydiffON", {"end_timing","filename","difficulty_text","easing"}, function(cmd)
 	local timing = cmd.timing
 	local end_timing = cmd.args[1]
 	local filename = cmd.args[2]
@@ -57,7 +57,7 @@ addScenecontrol("anomalydifficultyon", {"end_timing","filename","difficulty_text
 	end
 end)
 
-addScenecontrol("anomalydifficultyoff", {"end_timing","filename","easing"}, function(cmd)
+addScenecontrol("anomalydiffOFF", {"end_timing","filename","easing"}, function(cmd)
 	local timing = cmd.timing
 	local end_timing = cmd.args[1]
 	local filename = cmd.args[2]
