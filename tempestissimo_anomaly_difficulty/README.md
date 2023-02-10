@@ -1,4 +1,4 @@
-# [Highly recommended to use with my other UI control SC](../ui_enable_disable), otherwise the ADDED DIFFICULTY WILL BE COVERED BY THE INFO PANEL due to how Arcade works
+# [Highly recommended to use with my other UI control SC](../ui_enable_disable), otherwise the ADDED DIFFICULTY WILL BE COVERED BY THE INFO PANEL due to how ~~Arcade works~~ this SC works, but you'll want to hide the UI if you want it to be like in the game
 # If the text size doesn't look correct, please manually adjust the TEXT_SCALE_BASE value at the top of the main .lua file
 # Included commands and usage
 ## scenecontrol(_timing_, anomalydifficultyon, _end_timing, filename, difficulty_text, easing_)
